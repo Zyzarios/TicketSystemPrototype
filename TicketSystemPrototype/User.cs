@@ -18,6 +18,11 @@ namespace TicketSystemPrototype
             this.Birthday = birthday;
         }
 
+        public User(string password)
+        {
+            this.Password = password;
+        }
+
         public override string ToString()
         {
             return FirstName + " " + LastName;
