@@ -16,4 +16,8 @@
   <ItemGroup>
     <ProjectReference Include="..\TicketSystemPrototype\TicketSystemPrototype.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="User\" />
+    <Folder Include="Event\" />
+  </ItemGroup>
 </Project>
