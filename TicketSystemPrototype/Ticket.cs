@@ -2,20 +2,32 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TicketSystemPrototype
+namespace TicketSystemPrototype.model.Model
 {
-    public class Ticket : Event
+    public class Ticket
     {
+        private Event NewEvent;
+        public int TicketID { get; set; }
+        public string TicketDescription { get; set; }
 
-        int TicketID { get; set; }
-
-        public Ticket (int ticketid, string name, DateTime date, string adress, DateTime agelimit, float ticketprice, string eventinfo) : base (name,date,adress,agelimit,ticketprice,eventinfo){
-            this.TicketID = TicketID;
+        public Ticket(int ticketID, string ticketDescription, Event newEvent)
+        {
+            this.TicketID = ticketID;
+            this.TicketDescription = ticketDescription;
+            this.NewEvent = newEvent;
         }
-}   
 
+        public void PrintTicket(Ticket newticket)
+        {
+            //Later replace with write to file or send email
+            Console.WriteLine(newticket.ToString());
+            Console.ReadLine();
+        }
 
+        public override string ToString()
+        {
+            return TicketID + " " + NewEvent.ToString() + "\n" + TicketDescription;
+        }
 
-
-
+    }
 }

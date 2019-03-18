@@ -17,7 +17,7 @@
     <ProjectReference Include="..\TicketSystemPrototype\TicketSystemPrototype.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="User\" />
-    <Folder Include="Event\" />
+    <Compile Remove="User\TestUser.cs" />
+    <Compile Remove="User\TestUserPassword.cs" />
   </ItemGroup>
 </Project>

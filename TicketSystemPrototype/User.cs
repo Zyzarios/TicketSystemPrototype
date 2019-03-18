@@ -1,4 +1,6 @@
 ﻿using System;
+using TicketSystemPrototype.model.Model;
+
 namespace TicketSystemPrototype
 {
     public class User     {         private string Username { get; set; }         private string Password { get; set; }         private string FirstName { get; set; }         private string LastName { get; set; }         private string Address { get; set; }         private string PhoneNumber { get; set; }         private string Email { get; set; }
