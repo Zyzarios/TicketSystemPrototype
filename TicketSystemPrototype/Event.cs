@@ -9,13 +9,13 @@ namespace TicketSystemPrototype.model.Model
 {
     public class Event
     {
-        string Name { get; set; }
-        DateTime Date { get; set; }
-        string Adress { get; set; }
-        DateTime AgeLimit { get; set; }
-        float TicketPrice { get; set; }
-        string EventInfo { get; set; }
-        public long AvailableTickets { get; set; }
+       public string Name { get; set; }
+       public DateTime Date { get; set; }
+       public string Adress { get; set; }
+       public DateTime AgeLimit { get; set; }
+       public float TicketPrice { get; set; }
+       public string EventInfo { get; set; }
+       public long AvailableTickets { get; set; }
 
 
         public Event(string name, DateTime date, string adress, DateTime ageLimit, float ticketPrice, string eventInfo, long availableTickets)
