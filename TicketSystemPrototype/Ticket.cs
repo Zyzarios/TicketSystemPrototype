@@ -17,12 +17,14 @@ namespace TicketSystemPrototype.model.Model
             this.NewEvent = newEvent;
         }
 
-        public void PrintTicket(Ticket newticket)
+        public static void PrintTicket(Ticket newticket)
         {
             //Later replace with write to file or send email
             Console.WriteLine(newticket.ToString());
             Console.ReadLine();
         }
+
+
 
         public override string ToString()
         {

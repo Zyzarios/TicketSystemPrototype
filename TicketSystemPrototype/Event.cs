@@ -15,10 +15,10 @@ namespace TicketSystemPrototype.model.Model
         DateTime AgeLimit { get; set; }
         float TicketPrice { get; set; }
         string EventInfo { get; set; }
-        Event[] PurchasedEvents { get; set; }
+        public long AvailableTickets { get; set; }
 
 
-        public Event(string name, DateTime date, string adress, DateTime ageLimit, float ticketPrice, string eventInfo)
+        public Event(string name, DateTime date, string adress, DateTime ageLimit, float ticketPrice, string eventInfo, long availableTickets)
         {
             if (name != "" && date >= DateTime.Now && adress != "")
             {
@@ -28,6 +28,7 @@ namespace TicketSystemPrototype.model.Model
                 this.AgeLimit = ageLimit;
                 this.TicketPrice = ticketPrice;
                 this.EventInfo = eventInfo;
+                this.AvailableTickets = availableTickets;
             }
             else
             {
@@ -48,4 +49,6 @@ namespace TicketSystemPrototype.model.Model
             return Name + " " + Date + " " + Adress + " " + AgeLimit + " " + TicketPrice + " " + EventInfo;
         }
     }
+
+   
 }

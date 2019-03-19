@@ -63,6 +63,28 @@ namespace TicketSystemPrototype.model.Model
 
         }
 
+        public void BuyTicket(Ticket newticket, Event newEvent)
+        {
+            long availableTickets = newEvent.AvailableTickets;
+            if (availableTickets > 0)
+            {
+                availableTickets--;
+
+                 //TODO Later replace with write to file or send email
+                Console.WriteLine("Purchase complete");
+                Console.WriteLine("Receipt \n" + newticket.ToString());
+                Console.ReadLine();
+            }
+            else
+            {
+                Console.WriteLine("Sorry this event is sold out");
+                Console.ReadLine();
+            }
+
+        }
+
+
+
     }
 
 }
