@@ -10,12 +10,12 @@ namespace xUnitTestTicketSystemPrototype
      public void BuyTicketAvailable()
      {
        var CityTour = new Event("Bytur", new DateTime(2019, 7, 7), "Storgata 6, 0400 Oslo", new DateTime(2005, 1, 1), 200, "Bytur for alle", 100);
-            long availableTickets = CityTour.AvailableTickets;
+           long availableTickets = CityTour.AvailableTickets;
        
        if (availableTickets > 0)
        {
            CityTour.AvailableTickets--;
-           Assert.True(availableTickets == 99);
+           Assert.True(CityTour.AvailableTickets == 99);
         }
          else
             {
@@ -35,7 +35,7 @@ namespace xUnitTestTicketSystemPrototype
             if (availableTickets > 0)
             {
                 CityTour.AvailableTickets--;
-                Assert.True(availableTickets == 99);
+                Assert.True(CityTour.AvailableTickets == 99);
             }
             else
             {
@@ -55,7 +55,7 @@ namespace xUnitTestTicketSystemPrototype
             if (availableTickets > 0)
             {
                 CityTour.AvailableTickets--;
-                Assert.True(availableTickets == 99);
+                Assert.True(CityTour.AvailableTickets == 99);
             }
             else
             {

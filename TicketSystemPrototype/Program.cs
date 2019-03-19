@@ -16,7 +16,6 @@ namespace TicketSystemPrototype.model
 
             var ole = new Customer("ole@gmail.com", "drossap", "Ole", "Nordman", "Skogen 3b, 1803 Halden", "92991991", new DateTime(1999,1,1));
 
-            Console.WriteLine("Object");
             ole.BuyTicket(trackDayTicket, trackDay, ole);
             Console.WriteLine("Available tickets " + trackDay.AvailableTickets);
 
