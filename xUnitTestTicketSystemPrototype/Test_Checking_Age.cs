@@ -17,8 +17,12 @@ namespace XUnitTestTicketSystemPrototypeTest
             var BirthDate = new DateTime(1994, 01, 01);
             var Age = DateTime.Now.Year - BirthDate.Year;
             var Birthday = BirthDate.Day;
+            if (Age >= LegalAge)
+            {
+                Assert.True(Age >= LegalAge);
 
-            if (Age == LegalAge)
+            }
+            else if (Age == LegalAge)
             {
                 Assert.True(Birthday <= LegalAgeBirthday);
             }
@@ -40,7 +44,12 @@ namespace XUnitTestTicketSystemPrototypeTest
             var Age = DateTime.Now.Year - BirthDate.Year;
             var Birthday = BirthDate.Day;
 
-            if (Age == LegalAge)
+            if (Age >= LegalAge)
+            {
+                Assert.True(Age >= LegalAge);
+
+            }
+            else if (Age == LegalAge)
             {
                 Assert.False(Birthday <= LegalAgeBirthday);
             }
